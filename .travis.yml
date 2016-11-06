@@ -8,15 +8,16 @@ addons:
       - tk-dev
       - liblzma-dev
       - python-pip
+
+compiler:
+  - clang
+  - gcc
+
+env:
+  - TESTING=cpython
       
 matrix:
   include:
-    - os: linux
-      compiler: gcc
-      env: TESTING=cpython
-    - os: linux
-      compiler: clang
-      env: TESTING=cpython
     - os: linux
       language: python
       python: 3.5
